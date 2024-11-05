@@ -17,9 +17,9 @@ const userName = ''
       </div>
     </header>
     <main>
-      <span class="message" v-if="!userName"
-        >You need log in to get access</span
-      >
+      <span class="message" v-if="!userName">
+        You need log in to get access
+      </span>
       <template v-else>
         <UsersControls />
         <UsersList />
@@ -38,13 +38,16 @@ header {
   padding: 2rem 4.8rem;
   display: flex;
   align-items: center;
+  gap: 3rem;
   justify-content: space-between;
   border-bottom: 1px solid var(--color-grey-100);
   background-color: var(--color-grey-0);
 }
 .controls {
   display: flex;
-  gap: 5rem;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 1rem 5rem;
 }
 main {
   flex: 1;

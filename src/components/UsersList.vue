@@ -53,4 +53,7 @@ const users = []
 .items:not(:last-child) {
   border-bottom: 1px solid var(--color-grey-100);
 }
+.items span {
+  word-break: break-all;
+}
 </style>
