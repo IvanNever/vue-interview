@@ -10,30 +10,23 @@ This template should help get you started developing with Vue 3 in Vite.
 
 TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-## Customize configuration
+1. Для авторизованого користувача в header має відображатись
+   компонент AppLogout, а для неавторизованого - AppLogin.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+2. При авторизації користувач вводить своє ім’я, яке має
+   зберігатись між сесіями та відображатись в компоненті Logout.
 
-## Project Setup
+3. При logout відповідно ім’я видаляється та користувач стає неавторизованим.
 
-```sh
-npm install
-```
+4. В main секції не авторизованому користувачу виводиться повідомлення
+   про необхідність авторизації, а авторизованому - відображаються
+   компоненти UsersControls та UsersList
 
-### Compile and Hot-Reload for Development
+5. Компонент UsersControls завантажує список usersList з відкритого API
+   https://jsonplaceholder.typicode.com/users та відображає кількість
+   завантажених користувачів. (використати store pinia)
 
-```sh
-npm run dev
-```
+6. В компоненті UsersList отримані дані користувачів відображаються
+   в готовій таблиці.
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+7. При logout цей список користувачів має видалятись.
